@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embedded Messaging POC</title>
+</head>
+<body>
+<h1>Embedded Messaging Proof of Concept</h1>
+<p>This is a test page to display embedded messaging.</p>
+ 
+    <!-- Script for Embedded Messaging -->
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DKd000006PXKd',
+				'Agentforce_Web',
+				'https://ne1731472210030.my.site.com/ESWAgentforceWeb1733824124954',
+				{
+					scrt2URL: 'https://ne1731472210030.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://ne1731472210030.my.site.com/ESWAgentforceWeb1733824124954/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
+</html>
